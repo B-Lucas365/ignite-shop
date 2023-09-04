@@ -1,95 +1,72 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+'use client'
+import { Header } from "../components/Header";
+import {
+  FooterProduct,
+  HomeContainer,
+  Icons,
+  Img,
+  Product,
+  ProductContainer,
+} from "./styles";
+
+import {useKeenSlider} from 'keen-slider/react'
+import 'keen-slider/keen-slider.min.css'
+
+import shirt1 from "@/public/camisetas/Shirt-1.png";
+import shirt2 from "@/public/camisetas/Shirt-2.png";
+import shirt3 from "@/public/camisetas/Shirt-3.png";
 
 export default function Home() {
+  
+  const [sliderRef] = useKeenSlider({
+    slides: {
+      perView: 3,
+      spacing: 48,
+      
+    }
+  })
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <HomeContainer>
+      <Header />
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <ProductContainer ref={sliderRef} className="keen">
+        <Product className="keen-slider__slide">
+          <Img src={shirt1} alt="" height={420} width={380}/>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+          <FooterProduct>
+            <strong>Shirt x</strong>
+            <span>R$ 79,90</span>
+          </FooterProduct>
+        </Product>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+        <Product className="keen-slider__slide">
+          <Img src={shirt2} alt="" height={420} width={380}/>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
+          <FooterProduct>
+            <strong>Shirt x</strong>
+            <span>R$ 79,90</span>
+          </FooterProduct>
+        </Product>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+        <Product className="keen-slider__slide">
+          <Img src={shirt3} alt="" height={420} width={380}/>
+
+          <FooterProduct>
+            <strong>Shirt x</strong>
+            <span>R$ 79,90</span>
+          </FooterProduct>
+        </Product>
+
+        <Product className="keen-slider__slide">
+          <Img src={shirt3} alt="" height={420} width={380}/>
+
+          <FooterProduct>
+            <strong>Shirt x</strong>
+            <span>R$ 79,90</span>
+          </FooterProduct>
+        </Product>
+      </ProductContainer>
+    </HomeContainer>
+  );
 }
