@@ -1,5 +1,5 @@
 "use client";
-import styled from 'styled-components'
+import styled from "styled-components";
 import { Aws } from "@styled-icons/boxicons-logos/Aws";
 import { Amazon } from "@styled-icons/boxicons-logos/Amazon";
 import Image from "next/image";
@@ -12,12 +12,7 @@ export const Icons = {
 
 export const Img = styled(Image)``;
 
-export const HomeContainer = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  min-height: 100vh;
+export const CarouselContainer = styled.main`
   
   `;
 
