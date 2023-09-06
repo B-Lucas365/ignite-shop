@@ -1,14 +1,6 @@
 "use client";
 import styled from 'styled-components'
-import { Aws } from "@styled-icons/boxicons-logos/Aws";
-import { Amazon } from "@styled-icons/boxicons-logos/Amazon";
 import Image from "next/image";
-
-// icons
-export const Icons = {
-  Aws,
-  Amazon,
-};
 
 export const Img = styled(Image)``;
 
