@@ -16,8 +16,8 @@ interface ProductsTypes {
 export const Carousel = ({ products }: ProductsTypes) => {
   const [sliderRef] = useKeenSlider({
     slides: {
-      perView: 3,
-      spacing: 48,
+      perView: "auto", 
+      spacing: 48
     },
   });
 

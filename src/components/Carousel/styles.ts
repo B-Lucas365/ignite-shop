@@ -14,10 +14,9 @@ export const ProductContainer = styled.div`
   margin-left: auto;
   min-height: 456px;
   max-width: calc(100vw - ((100vw - 1180px) / 2));
-
 `;
 
-export const Product = styled.div`
+export const Product = styled.a`
   background: linear-gradient(180deg, #1ea483 0%, #7465d4 100%);
   border-radius: 8px;
   cursor: pointer;
@@ -25,7 +24,7 @@ export const Product = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-    
+      
   img {
     object-fit: cover;
   }
