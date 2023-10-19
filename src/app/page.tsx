@@ -3,7 +3,7 @@ import { HomeContainer } from "./styles";
 import { stripe } from "../lib/stripe";
 import Stripe from "stripe";
 import { Header } from "../components/Header";
-import { Carousel } from "../components/Carousel";
+import { CarouselComponent } from "../components/Carousel";
 
 export default async function Home() {
   const response = await stripe.products.list({
@@ -27,7 +27,7 @@ export default async function Home() {
   return (
     <HomeContainer>
       <Header />
-      <Carousel products={products}/>
+      <CarouselComponent products={products}/>
     </HomeContainer>
   );
 }

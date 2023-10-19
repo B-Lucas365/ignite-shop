@@ -4,19 +4,19 @@ import Image from "next/image";
 
 export const Img = styled(Image)``;
 
-export const CarouselContainer = styled.main`
-  
-  `;
-
 export const ProductContainer = styled.div`
   display: flex;
   width: 100%;
-  margin-left: auto;
   min-height: 456px;
-  max-width: calc(100vw - ((100vw - 1180px) / 2));
+
+  .mantine-Carousel-root {
+    max-width: calc(100vw - ((100vw - 1180px) / 2));
+    margin-left: auto;
+  }
 `;
 
 export const Product = styled.a`
+  width: 500px;
   background: linear-gradient(180deg, #1ea483 0%, #7465d4 100%);
   border-radius: 8px;
   cursor: pointer;
@@ -24,7 +24,8 @@ export const Product = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-      
+  
+
   img {
     object-fit: cover;
   }
